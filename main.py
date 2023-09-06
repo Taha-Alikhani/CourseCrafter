@@ -210,7 +210,7 @@ class ScheduleForm:
                 key = f'{course.id}-{course.group}-{course.credit}'
                 if key in courses:
                     course.final = courses[key]
-        local_data.courses = courses
+        local_data.courses = self.courses
         local_data.save()
         messagebox.showinfo("Done", "Done!", icon="info")
 
